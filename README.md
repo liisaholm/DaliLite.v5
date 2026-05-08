@@ -7,10 +7,11 @@ as described in:
 > *Bioinformatics* 35, 5326-5327.
 > https://doi.org/10.1093/bioinformatics/btz536
 
-The underlying structural comparison algorithm is described in:
+The underlying method is reviewed in:
 
-> Holm L, Sander C (1993) Protein structure comparison by alignment of
-> distance matrices. *J. Mol. Biol.* 233, 123-138.
+  Holm L (2020) DALI and the Persistence of Protein Shape. 
+  Protein Science 29, 128-140.
+  https://doi: 10.1002/pro.3749
 
 ## Contents
 

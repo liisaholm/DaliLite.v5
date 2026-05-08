@@ -21,7 +21,7 @@ The underlying structural comparison algorithm is described in:
 | `DAT/` | Data files required at runtime |
 | `toy_PDB/` | Small PDB files for testing |
 | `test.csh` | Test script |
-| `test_output/` | Expected output for comparison |
+| `test_output` | Expected output for test.csh |
 | `MANUAL.html` | Full user manual |
 | `LICENCE` | Licence |
 
@@ -40,7 +40,7 @@ Tested on Red Hat Linux with gcc 4.8.5 and OpenMPI 1.10.7.
 
     cd DaliLite.v5
     ./test.csh
-    # compare output to ./test_output/
+    # compare output to ./test_output
 
 The test script assumes `blastp` and `makeblastdb` are on your `PATH`.
 If not, download BLAST+ from:

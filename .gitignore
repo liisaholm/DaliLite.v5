@@ -1,0 +1,32 @@
+# Compiled objects and modules
+*.o
+*.mod
+*.a
+*.so
+
+# Executables in bin/ (built by make)
+bin/dsspcmbi
+bin/filter95fitz
+bin/fssp
+bin/mpicompare
+bin/pipe
+bin/pipedccp
+bin/puu
+bin/puutos
+bin/selfdccp
+bin/serialcompare
+
+# Test output (generated, not committed)
+test/
+
+# Editor noise
+*~
+.DS_Store
+.idea/
+.vscode/
+
+# Runtime
+nohup.out
+*.pid
+*.log
+

@@ -1,0 +1,27 @@
+Copyright (c) 2024, [Your Name / Your Institution]
+All rights reserved.
+
+DaliLIte is free software for academic and non-commercial use.
+Redistribution and use in source and binary forms, with or without
+modification, are permitted for non-commercial purposes provided that
+the following conditions are met:
+
+1. Redistributions of source code must retain this copyright notice
+   and this list of conditions.
+
+2. Redistributions in binary form must reproduce this copyright notice
+   and this list of conditions in the documentation and/or other
+   materials provided with the distribution.
+
+3. Publications resulting from use of this software must cite:
+
+   Holm L (2019) Benchmarking fold detection by DaliLite v.5.
+   *Bioinformatics* 35, 5326-5327.
+   https://doi.org/10.1093/bioinformatics/btz536
+
+4. Use of this software for commercial purposes, or incorporation into
+   a commercial product or service, requires prior written permission
+   from the copyright holder. Contact [your email] for licensing terms.
+
+THIS SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND.
+THE AUTHORS ACCEPT NO LIABILITY FOR DAMAGES ARISING FROM ITS USE.

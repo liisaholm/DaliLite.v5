@@ -16,6 +16,9 @@ bin/puutos
 bin/selfdccp
 bin/serialcompare
 
+# site-specific configuration
+bin/dali.conf
+
 # Test output (generated, not committed)
 test/
 

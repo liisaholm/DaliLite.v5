@@ -1,4 +1,3 @@
-#use lib qw(/home/luholm/DaliLite.v5/bin);
 use strict;
 use FindBin qw($Bin);
 use upgma;

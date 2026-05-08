@@ -11,14 +11,30 @@ use Getopt::Long qw(GetOptions);
 
 # BLAST config
 # Install BLAST from ftp://ftp.ncbi.nlm.nih.gov/blast/executables/blast+/LATEST/
-my $BLAST_DB="/data/DaliLite/pdb.blast"; # "/home/luholm/dalitest/pdb.blast"; # makeblastdb -in /data/uniprot/pdb.fasta -out pdb.blast -dbtype prot
-my $BLASTP_EXE="/usr/local/bin/blastp"; #"/home/luholm/ncbi-blast-2.8.1+/bin\/blastp";
-my $BLAST_NUM_THREADS=32;
+
+my $conf_file = $ENV{DALI_CONF} || "$FindBin::Bin/dali.conf";
+die "Config file not found: $conf_file\n  Copy $FindBin::Bin/dali.conf.example to $conf_file and edit.\n"
+    unless -r $conf_file;
+
+my %cfg;
+open(my $fh, "<", $conf_file) or die "Cannot read $conf_file: $!\n";
+while (<$fh>) {
+    chomp; s/#.*//; s/^\s+|\s+$//g;
+    next unless /\S/;
+    my ($k, $v) = split(/\s*=\s*/, $_, 2);
+    $cfg{$k} = $v if defined $k && defined $v;
+}
+close $fh;
+
+my $BLAST_DB         = $cfg{BLAST_DB}   or die "BLAST_DB not set in $conf_file\n";
+my $BLASTP_EXE       = $cfg{BLASTP_EXE} or die "BLASTP_EXE not set in $conf_file\n";
+my $MPIRUN_EXE       = $cfg{MPIRUN_EXE} or die "MPIRUN_EXE not set in $conf_file\n";
+my $BLAST_NUM_THREADS = $cfg{BLAST_NUM_THREADS} // 32;  # optional, has default
+
 # temporary BLAST input/output
 my $tmpblastin="$$.fasta";
 my $tmpblastout="$$.blast";
 # dali programs
-my $MPIRUN_EXE="/home/luholm/opt/openmpi/bin/mpirun "; #-output-filename x  ";
 my $MPIDALI_BIN=$FindBin::Bin;
 my $MPICOMPARE_EXE="$MPIDALI_BIN/mpicompare";
 my $SERIALCOMPARE_EXE="$MPIDALI_BIN/serialcompare";

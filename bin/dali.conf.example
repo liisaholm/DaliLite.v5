@@ -1,0 +1,7 @@
+# dali.conf — site-specific paths for DaliLite
+# Copy from dali.conf.example and edit for your site.
+
+BLAST_DB    = /data/DaliLite/pdb.blast
+BLASTP_EXE  = /usr/local/bin/blastp
+MPIRUN_EXE  = /usr/lib64/openmpi/bin/mpirun
+BLAST_NUM_THREADS = 32

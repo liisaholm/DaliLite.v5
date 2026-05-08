@@ -10,8 +10,8 @@ as described in:
 The underlying method is reviewed in:
 
 >  Holm L (2020) DALI and the Persistence of Protein Shape. 
->  Protein Science 29, 128-140.
->   https://doi: 10.1002/pro.3749
+>  *Protein Science* 29, 128-140.
+>   https://doi.org/10.1002/pro.3749
 
 ## Contents
 

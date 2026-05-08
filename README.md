@@ -34,6 +34,10 @@ For MPI parallel execution (requires OpenMPI — check `OPENMPI_PATH` in `Makefi
 
     make parallel
 
+Copy template and edit site-specific configuration file (dali.conf):
+
+    cp dali.conf.example dali.conf
+
 Tested on Red Hat Linux with gcc 4.8.5 and OpenMPI 1.10.7.
 
 ## Test
